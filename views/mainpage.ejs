@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/default.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="mainpage-task_and_add">
+        <div class="firstpage">
+            <h1>To_Do List</h1>
+        </div>
+        <div class="username">
+            <form action="/logout" method="GET">
+              <select name="action" onchange="this.form.submit()">
+                <option selected><%= user.username %></option>
+                <option value="logout">Logout</option>
+              </select>
+            </form>
+          </div>
+        <% todos.forEach(todo=> { %>
+        <div class="task-div" ><span onclick=showDesc() style="cursor: pointer;padding: 0 20px;"><%= todo.title %></span>
+            <form action="/delete/<%= todo._id %>?_method=DELETE" method="POST" style="float: right;">
+                <button type="submit" class="done-btn">Done</button>
+              </form>
+        </div>
+        <div id="popup-desc" class="hidden"><b>Description:</b> <br><br><%= todo.desc %>
+        </div>
+        <% }) %>
+        <button id="task-add-btn">+ Add task</button>
+    </div>
+    <div id="popup" class="hidden">
+        <form action="/add" method="POST" class="delete-form">
+            <input type="text" id="task-title" name="title" placeholder="Task title" required/><br>
+            <textarea  id="task-desc" name="desc" placeholder="Task Description"></textarea><br>
+            <button type="submit" class="form-sumbit-btn">Add</button>
+            <button id="cancel-btn" class="cancel-btn" >cancel</button>
+        </form>
+    </div>
+    <script>
+        const popup = document.getElementById('popup');
+        document.getElementById('task-add-btn').onclick = () => popup.classList.remove('hidden');
+        document.getElementById('cancel-btn').onclick = () => popup.classList.add('hidden');
+        const descPop= document.getElementById('popup-desc');
+        function showDesc(){
+            descPop.classList.toggle('hidden');  
+        }
+   
+    </script>
+</body>
+</html>

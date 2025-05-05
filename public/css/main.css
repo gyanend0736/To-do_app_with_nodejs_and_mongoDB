@@ -1,0 +1,85 @@
+.task-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1e1e2f;
+    padding: 10px 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    margin: 20px auto;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+.username {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    padding: 3px;
+}
+
+  
+.username select {
+    padding: 12px 20px;
+    border-radius: 6px;
+    background-color: #2a2a40;
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+  }
+.mainpage-task_and_add{
+    width: 40%;
+}
+.done-btn {
+    background-color: white;
+    color: purple;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+body{
+    display: flex;
+    justify-content: center;
+}
+
+
+#task-add-btn,.form-sumbit-btn,.cancel-btn{
+    background-color: #9D00FF;
+    color: #EDEDED;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+    cursor: pointer;
+    margin: 40px 25%;
+}
+.form-sumbit-btn{
+    margin: 0;
+}
+.cancel-btn{
+    background-color: #fff;
+    color: #9D00FF;
+    margin: 0;
+    margin-left: 25px;
+    z-index: 10;
+}
+#popup, #popup-desc{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #1E1E2F;
+    padding: 30px;
+    border-radius: 10px;
+    
+    z-index: 10;
+  
+}
+#task-title,#task-desc{
+    margin-bottom: 30px;
+    padding: 4px;
+}
+.hidden{
+    display: none;
+}

@@ -1,0 +1,61 @@
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+}
+
+.firstpage-authentication{
+    width: 30%;
+    
+    
+    /* position: relative;
+    left: 25%; */
+    background-color: #29294d;
+    
+    height: max-content;
+    padding: 40px 10%;
+}
+.Sign-up-btn{
+    background-color: #9D00FF;
+    color: #EDEDED;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+    cursor: pointer;
+    margin: 40px 25%;
+    
+}
+.Sign-up-btn:hover{
+    background-color: #d38399;
+}
+.Login-btn:hover{
+    color: #d38399;
+}
+.Login-btn{
+    text-decoration: none;
+    color: rgb(30, 119, 167);
+    transition: background 0.3s ease;
+}
+.firstpage-authentication h3{
+    margin: 30px 10%;
+}
+
+.card {
+    
+    
+    border-radius: 20px;
+    
+    animation: float 6s ease-in-out infinite;
+  }
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }

@@ -1,0 +1,14 @@
+*{
+    margin: 0;padding: 0;
+}
+body {
+    background-color: #0F0F1C;
+    color: #EDEDED;
+    font-family: 'Segoe UI', sans-serif;
+    height: 100vh;
+}
+.firstpage h1{
+    text-align: center;
+    width: 100%;
+    padding: 20px 0;
+}
